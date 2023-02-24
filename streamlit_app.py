@@ -36,8 +36,8 @@ try:
     #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     back_from_function=get_fruityvice_data(fruit_choice)
     streamlit.dataframe (back_from_function)
-except URLError as e:
-  streamlit.error()
+# except URLError as e:
+#   streamlit.error()
 
 # fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 # streamlit.write('The user entered ', fruit_choice)
