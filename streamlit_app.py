@@ -22,7 +22,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 #display the table on the page
 streamlit.dataframe (fruits_to_show)
 
-streamlit.stop()
+
 
 streamlit.header("Fruityvice Fruit Advice!")
 
@@ -49,7 +49,7 @@ except URLError as e:
 # fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # # write your own comment - what does this do?
 # streamlit.dataframe(fruityvice_normalized)
-
+streamlit.stop()
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
